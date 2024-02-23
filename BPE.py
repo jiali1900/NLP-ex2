@@ -8,7 +8,7 @@ def preprocess_text_from_file(file_path):
     text = text.lower()  # Convert to lowercase
     text = re.sub(r'\s+', ' ', text)  # Replace multiple spaces with a single space
     return text.strip()
-train_file_path = '/Users/lijiali/Desktop/en_ewt-ud-train.txt'
+train_file = 'en_ewt-ud-train.txt'
 
 
 # Step 1: Preprocess the text
@@ -17,7 +17,7 @@ def preprocess_text(text):
     text = re.sub(r'\s+', ' ', text)  # Replace multiple spaces with a single space
     return text.strip()
 
-preprocessed_text = preprocess_text_from_file(train_file_path)
+preprocessed_text = preprocess_text_from_file(train_file)
 
 # Step 2: Build initial vocabulary (word frequency dictionary)
 def build_vocab(text):
